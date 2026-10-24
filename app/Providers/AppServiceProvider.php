@@ -24,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureDefaults();
+        
+        if (class_exists(\Laravel\Boost\Boost::class)) {
+            \Laravel\Boost\Boost::registerAgent('gapcode', \App\GapCode::class);
+        }
     }
 
     /**
