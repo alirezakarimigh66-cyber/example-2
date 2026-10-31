@@ -1,19 +1,19 @@
-﻿# Project baseline
+# Project baseline
 
-Initialized on October 24, 2026. The application is a fresh Laravel starter with no custom market features yet.
+Initialized on October 24, 2026. The application began as a fresh Laravel starter. Phone authentication and role dashboards were implemented on October 26, 2026; see [authentication](authentication.md).
 
 ## Existing behavior and routes
 
 | Method | Path | Name | Behavior | Source |
 | --- | --- | --- | --- | --- |
-| GET / HEAD | `/` | `home` | Renders the starter welcome page; no route-level authentication middleware is attached. | `routes/web.php` |
+| GET / HEAD | `/` | `home` | Renders the public account-entry homepage with the shared authentication modal for guests. | `routes/web.php` |
 | GET / HEAD | `/up` | Framework-managed | Laravel health endpoint configured during application bootstrap. | `bootstrap/app.php` |
 
 ## Implementation
 
 - Controller: not applicable to the homepage; its route renders a view directly.
-- View: `resources/views/welcome.blade.php` contains the starter welcome page.
-- Model: not applicable to the homepage. The scaffold includes `app/Models/User.php`; this alone does not imply an implemented authentication feature.
+- View: `resources/views/welcome.blade.php` contains the public account-entry homepage.
+- Model: not applicable to the homepage. `app/Models/User.php` now supports phone authentication and roles; see the authentication note.
 - Service: no feature-specific service is used by the homepage.
 - Routing configuration: `bootstrap/app.php` loads `routes/web.php` and `routes/console.php` and configures `/up`.
 - Console: `routes/console.php` defines the starter `inspire` command; it is not a website route.

@@ -1,4 +1,4 @@
-﻿---
+---
 name: knowledge-notebook
 description: Consult and maintain Dopamin Market feature knowledge, routes, and implementation references before project work and after completed tasks.
 ---
@@ -9,9 +9,12 @@ Read this index before project work, then consult the relevant feature notes. So
 
 ## Current project
 
-This is a newly created Laravel starter application. No custom market features have been implemented yet.
+Dopamin Market is a Persian RTL Laravel application with phone/password authentication and protected user/admin dashboards. Administrators can manage products and categories. The public market catalog and checkout are not implemented yet.
 
-- [Project baseline](features/project-baseline.md): starter homepage, health endpoint, and initial application structure.
+- [Project baseline](features/project-baseline.md): public homepage, health endpoint, and initial application structure.
+- [Phone authentication](features/authentication.md): shared login/register modal, normalized Iranian mobiles, session security, role dashboards, and secure administrator setup.
+
+- [Product management](features/product-management.md): administrator-only product/category CRUD, search/filter/pagination, private image uploads and cleanup, and RTL management screens.
 
 ## Maintaining the notebook
 
